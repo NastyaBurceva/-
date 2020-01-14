@@ -1,0 +1,516 @@
+//задача 2 
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	cout << "		***Задание №2***" << endl;
+	int const N = 3, C = 5;
+	int A[N][C];
+	for (int i(0); i < N; i++) 
+	{
+		for (int j(0); j < C; j++)
+		{
+			A[i][j] = rand() % 10;
+		}
+		cout << endl;
+	}
+	cout << "***Двумерный массив заполненый случайными числами от 0 до 10***"<< endl;
+	cout << endl;
+	for (int i(0); i < N; i++)
+	{
+		cout << "|";
+		for (int j(0); j < C; j++)
+		{
+			cout << A[i][j]<<' ';
+		}
+		cout <<"|"<< endl;
+	}
+	_getch();
+	return 0;
+}
+//zadacha3
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	cout << "		***Задание №3***" << endl;
+	int const N = 3, C = 5;
+	int A[N][C];
+	for (int i(0); i < N; i++)
+	{
+		for (int j(0); j < C; j++)
+		{
+			A[i][j] = rand() % 10;
+		}
+	}
+	cout << endl;
+	cout << "Двумерный массив заполненый случайными числами от 0 до 10:" << endl;
+	cout << endl;
+	for (int i(0); i < N; i++)
+	{
+		cout << "|";
+		for (int j(0); j < C; j++)
+		{
+			cout << A[i][j] << ' ';
+		}
+		cout << "|" << endl;
+	}
+	cout << endl;
+	int str, sum = 0;
+	cout << "Введите номер строки, сумму которой нужно посчитать: ";
+	cin >> str;
+	str = str - 1;
+	for (int i(0); i < 5; i++)
+	{
+		sum += A[str][i];
+	}
+	cout << endl;
+	cout << "Сумма данной строки ровна: " << sum;
+	cout << endl;
+	cout << endl;
+	int s;
+	sum = 0;
+	cout << "Введите номер столбца, сумму которого нужно посчитать: ";
+	cin >> s;
+	s = s - 1;
+	for (int i(0); i < 3; i++)
+	{
+		sum += A[i][s];
+	}
+	cout << endl;
+	cout << "Сумма данного столбца ровна: " << sum;
+	_getch();
+	return 0;
+}
+//zadacha4
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	cout << "		***Задание №4***" << endl;
+	int const N = 3, C = 5;
+	int A[N][C];
+	for (int i(0); i < N; i++)
+	{
+		for (int j(0); j < C; j++)
+		{
+			A[i][j] = rand() % 10;
+		}
+	}
+	cout << endl;
+	cout << "Двумерный массив заполненый случайными числами от 0 до 10:" << endl;
+	cout << endl;
+	for (int i(0); i < N; i++)
+	{
+		cout << "|";
+		for (int j(0); j < C; j++)
+		{
+			cout << A[i][j] << ' ';
+		}
+		cout << "|" << endl;
+	}
+	cout << endl;
+	int  b, c, z;
+	cout << "Введите номера строк, котрые нужно поменять местами: ";
+	cin >> b;
+	cin>> c;
+	b = b - 1;
+	c = c - 1;
+	for (int i(0); i < 5; i++)
+	{
+		z = A[b][i];
+		A[b][i] = A[c][i];
+		A[c][i] = z;
+	}
+	cout << endl;
+	cout << "Вывод измененного массива: "<< endl;
+	cout << endl;
+	for (int i(0); i < N; i++)
+	{
+		cout << "|";
+		for (int j(0); j < C; j++)
+		{
+			cout << A[i][j] << ' ';
+		}
+		cout << "|" << endl;
+	}
+	cout << endl;
+	cout << "Введите номера столбцов, котрые нужно поменять местами: ";
+	int y, u,v;
+	cin >> y >> u;
+	y = y - 1;
+	u = u - 1;
+	for (int i(0); i < 5; i++)
+	{
+		v = A[i][y];
+		A[i][y] = A[i][u];
+		A[i][u] = v;
+	}
+	cout << endl;
+	cout << "Вывод измененного массива №2: "<< endl;
+	cout << endl;
+	for (int i(0); i < N; i++)
+	{
+		cout << "|";
+		for (int j(0); j < C; j++)
+		{
+			cout << A[i][j] << ' ';
+		}
+		cout << "|" << endl;
+	}
+	_getch();
+	return 0;
+}
+//zadacha5
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	cout << "		***Задание №5***" << endl;
+	int const N = 3, C = 3;
+	int A[N][C];
+	for (int i(0); i < N; i++)
+	{
+		for (int j(0); j < C; j++)
+		{
+			A[i][j] = rand() % 10;
+		}
+	}
+	cout << endl;
+	cout << "Двумерный массив заполненый случайными числами от 0 до 10:" << endl;
+	cout << endl;
+	for (int i(0); i < N; i++)
+	{
+		cout << "|";
+		for (int j(0); j < C; j++)
+		{
+			cout << A[i][j] << ' ';
+		}
+		cout << "|" << endl;
+	}
+	int sum = 0;
+	for (int i(1); i < C -1; i++)
+	{
+		sum += A[0][i];
+	}
+	for (int i(1); i < C - 1; i++)
+	{
+		sum += A[N-1][i];
+	}
+	for (int i(0); i < N; i++)
+	{
+		sum += A[i][0];
+	}
+	for (int i(0); i < N; i++)
+	{
+		sum += A[i][C-1];
+	}
+	cout <<"Сумма чисел внешнего кольца равна: "<< sum;
+	_getch();
+	return 0;
+}
+//zadacha6nepolnaya
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	cout << "		***Задание №6***" << endl;
+	int const N = 3, C = 3;
+	int A[N][C], sum = 0;
+	for (int i(0); i < N; i++)
+	{
+		for (int j(0); j < C; j++)
+		{
+			A[i][j] = rand() % 10;
+			sum += A[i][j];
+		}
+	}
+	cout << endl;
+	cout << "Двумерный массив заполненый случайными числами от 0 до 10:" << endl;
+	cout << endl;
+	for (int i(0); i < N; i++)
+	{
+		cout << "|";
+		for (int j(0); j < C; j++)
+		{
+			cout << A[i][j] << ' ';
+		}
+		cout << "|" << endl;
+	}
+	cout << endl;
+	cout <<"Сумма чисел во всем массиве равна: "<< sum;
+	_getch();
+	return 0;
+}
+//zadacha7
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	cout << "		***Задание №7***" << endl;
+	int const N = 5, C = 5;
+	int A[N][C];
+	for (int i(0); i < N; i++)
+	{
+		for (int j(0); j < C; j++)
+		{
+			A[i][j] = rand() % 3;
+		}
+	}
+	cout << endl;
+	cout << "Двумерный массив заполненый случайными числами от 0 до 10:" << endl;
+	cout << endl;
+	for (int i(0); i < N; i++)
+	{
+		cout << "|";
+		for (int j(0); j < C; j++)
+		{
+			cout << A[i][j] << ' ';
+		}
+		cout << "|" << endl;
+	}
+	int sum = 0;
+	for (int i(0); i < 3; i++)
+	{
+		for (int j(0); j < 2; j++)
+		{
+			sum += A[i][j];
+		}
+	}
+	cout << "Сумма прямоуголника 3х2 в квадратном массиве равна: "<<sum ;
+	_getch();
+	return 0;
+}
+//zadacha8
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	cout << "		***Задание №8***" << endl;
+	int const N = 4, C = 5;
+	int A[N][C];
+	for (int i(0); i < N; i++)
+	{
+		for (int j(0); j < C; j++)
+		{
+			A[i][j] = rand() % 10;
+		}
+	}
+	cout << endl;
+	cout << "Двумерный массив заполненый случайными числами от 0 до 10:" << endl;
+	cout << endl;
+	for (int i(0); i < N; i++)
+	{
+		cout << "|";
+		for (int j(0); j < C; j++)
+		{
+			cout << A[i][j] << ' ';
+		}
+		cout << "|" << endl;
+	}
+	cout << endl;
+	int sum = 0, d=0, c;
+	for (int i(0); i < N; i++)
+	{
+		sum = 0;
+		for (int j(0); j < C; j++)
+		{
+			sum += A[i][j];
+		}
+		if (sum > d)
+		{
+			c = i;
+			d = sum;
+		}
+	}
+	cout << "строка с наибольшей сумой элементов: " << c+1 << endl;
+	cout << endl;
+	cout << "Сумма ее элементов равна: "<<d;
+	_getch();
+	return 0;
+}
+//zadacha9
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	cout << "		***Задание №9***" << endl;
+	int const N = 5, C = 5;
+	int A[N][C];
+	for (int i(0); i < N; i++)
+	{
+		for (int j(0); j < C; j++)
+		{
+			A[i][j] = rand() % 10;
+		}
+	}
+	cout << endl;
+	cout << "Двумерный массив заполненый случайными числами от 0 до 10:" << endl;
+	cout << endl;
+	for (int i(0); i < N; i++)
+	{
+		cout << "|";
+		for (int j(0); j < C; j++)
+		{
+			cout << A[i][j] << ' ';
+		}
+		cout << "|" << endl;
+	}
+	cout << endl;
+	int sum = 0, d = C-1, sum2 = 0;
+	for (int i(0); i < N; i++)
+	{
+		sum += A[i][i];
+	}
+	for (int i(d); i > 0; i--)
+	{
+		sum2 += A[i][i];
+	}
+
+	cout << "Сумма элементов главной дмагонали равна: " << sum;
+	cout << endl; 
+	cout << endl;
+	cout << "Сумма второстепенной диагонали равна: " << sum2;
+	cout << endl << endl;
+	if(sum!=sum2)
+	{
+		if (sum > sum2)
+		{
+			cout << "Сумма элементов главной диагонли больше суммы элементов второстепенной";
+		}
+		else
+		{
+			cout << "Сумма элементов второстепенной диагонли больше суммы элементов главной";
+		}
+	}
+	else
+	{
+		cout << "Суммы элементов второстепенной и главной диагоналей равны";
+	}
+
+	_getch();
+	return 0;
+}
+//zadacha10
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	cout << "		***Задание №10***" << endl;
+	int const N = 5, C = 5;
+	int A[N][C];
+	for (int i(0); i < N; i++)
+	{
+		for (int j(0); j < C; j++)
+		{
+			A[i][j] = rand() % 10;
+		}
+	}
+	cout << endl;
+	cout << "Двумерный массив заполненый случайными числами от 0 до 10:" << endl;
+	cout << endl;
+	for (int i(0); i < N; i++)
+	{
+		cout << "|";
+		for (int j(0); j < C; j++)
+		{
+			cout << A[i][j] << ' ';
+		}
+		cout << "|" << endl;
+	}
+	cout << endl;
+	cout << endl;
+	for (int i(0); i < N; i++)
+	{
+		cout << "|";
+		for (int j(C-1); j >=0; j--)
+		{
+			cout << A[j][i] << ' ';
+		}
+		cout << "|" << endl;
+	}
+	cout << endl;
+	cout << endl;
+	for (int i(N-1); i >=0; i--)
+	{
+		cout << "|";
+		for (int j(0); j < C; j++)
+		{
+			cout << A[j][i] << ' ';
+		}
+		cout << "|" << endl;
+	}
+	_getch();
+	return 0;
+}
+//zadacha11nepolnaya
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	cout << "		***Задание №10***" << endl;
+	int const N = 5, C = 5;
+	int A[N][C];
+	for (int i(0); i < N; i++)
+	{
+		for (int j(0); j < C; j++)
+		{
+			A[i][j] = rand() % 10;
+		}
+	}
+	cout << endl;
+	cout << "Двумерный массив заполненый случайными числами от 0 до 10:" << endl;
+	cout << endl;
+	for (int i(0); i < N; i++)
+	{
+		cout << "|";
+		for (int j(0); j < C; j++)
+		{
+			cout << A[i][j] << ' ';
+		}
+		cout << "|" << endl;
+	}
+	cout << endl;
+	cout << endl;
+	for (int i(0); i < N; i++)
+	{
+		cout << "|";
+		for (int j(0); j < C; j++)
+		{
+			cout << A[j][i] << ' ';
+		}
+		cout << "|" << endl;
+	}
+	_getch();
+	return 0;
+}
